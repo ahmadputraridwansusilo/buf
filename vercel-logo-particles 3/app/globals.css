@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #9ade00;
+  --primary-dark: #7fb800;
+  --secondary: #14f195;
+  --accent: #00c2ff;
+  --background: #0f172a;
+  --foreground: #f8fafc;
+  --card: #1e293b;
+  --card-foreground: #f1f5f9;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.hero-gradient {
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(154, 222, 0, 0.15) 0%,
+    rgba(20, 241, 149, 0.05) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.feature-card {
+  background: rgba(30, 41, 59, 0.8);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(154, 222, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  border-color: rgba(154, 222, 0, 0.5);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px -5px rgba(154, 222, 0, 0.1);
+}
+
+.glow {
+  box-shadow: 0 0 15px rgba(154, 222, 0, 0.5);
+}
+
+.grid-pattern {
+  background-image: linear-gradient(rgba(154, 222, 0, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(154, 222, 0, 0.1) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
